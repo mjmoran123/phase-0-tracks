@@ -4,10 +4,31 @@
 	<title>practice form</title>
 </head>
 <body>
-<form action="success.html">
-	
-	<label>Name:</label>
-	<input type="text" name="name"></input>
+<form action="success.html" method="post">
+
+	<div>
+		<label>Name:</label>
+		<input type="text" name="name">
+	</div>
+
+	<div>
+		<label>Gender:</label>
+		<select name="gender">
+			<option value="m">Male</option>
+			<option value="f">Female</option>
+			<option value="o">Other</option>
+		</select>
+	</div>
+
+	<div>
+		<label>Life Story:</label>
+		<textarea name="lifestory">Type your life story</textarea>
+	</div>
+
+	<div>
+		<button type="submit">Press HERE to submit</button>
+	</div>
+
 
 </form>
 
