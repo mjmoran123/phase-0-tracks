@@ -5,3 +5,4 @@
 * checkbox: creates a checkbox that can either be checked or left empty (boolean)
 * date: creates a date input  
 * `<select>`: creates a dropdown menu
+* `<button>`: creates a button
