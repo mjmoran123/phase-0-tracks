@@ -6,3 +6,4 @@
 * date: creates a date input  
 * `<select>`: creates a dropdown menu
 * `<button>`: creates a button
+* `<textarea>`: creates a longer text space for comments etc
