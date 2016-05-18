@@ -1,11 +1,12 @@
 
+
 body {
-  width: 960px;
+  max-width: 960px;
 
 }
 
 main {
-  width: 756px;
+  width: 80%;
   float: right;
 }
 
@@ -23,7 +24,7 @@ cite {
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
-  width: 200px;
+  min-width: 20%;
   float: left;
 }
 
@@ -43,4 +44,19 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+@media screen and (max-width: 500px) {
+  
+  h1 {
+    font-size: 20px; 
+  }
+  body{
+    width: 100%;
+  }
+   li {
+    display: inline;
+  }
+
+  }
+
 
