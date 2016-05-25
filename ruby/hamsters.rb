@@ -15,9 +15,8 @@ while adopt != "y" && adopt != "n" #make sure y or n
 	adopt=gets.chomp
 end
 puts "That's great. Estimate #{name}'s age in years. Give a numerical estimate."
-age = gets.chomp.to_f
-if adopt == "y"
-	puts "Thanks for telling us that #{name} is a #{noise} out of 10 on the noisy scale, is #{fur} and is about #{age} years young and is ready for adoption."
-else
-	puts "Thanks for telling us that #{name} is a #{noise} out of 10 on the noisy scale, is #{fur} and is about #{age} years young and is not ready for adoption."
+age = gets.chomp
+if age == ""
+	age = nil
 end
+puts "##############PRINT THIS VERY IMPORTANT HAMSTER CAGE TICKET##############\n Name: #{name} \n Noise Level: #{noise} \n Fur Color: #{fur} \n Ready for adoption: #{adopt} \n Age: #{age}"
