@@ -9,13 +9,20 @@ def encrypt (str)
 	alphabet = "abcdefghijklmnopqrstuvwxyz"
 	len = str.length
 	counter = 0
-	while counter < len
-		new_letter = alphabet[(alphabet.index(str[counter]) + 1) % 26]
-		encrypted_string = encrypted_string + new_letter
+	encrypted_string = ""
+	while counter < len                                   #next letter in encrypted string comes by finding the index of the current letter in original string
+		if str[counter] == " "                            # adding one to the index to advance and taking it mod 26 to aid with the z -> a issue (rollover)
+			new_letter = " "
+		else                                              
+			new_letter = alphabet[(alphabet.index(str[counter]) + 1) % 26] 
+		end
+		encrypted_string += new_letter
 		counter += 1
 	end
 	return encrypted_string
 end
+
+
 
 
 # decrypt method: takes in an encrypted string
