@@ -22,12 +22,28 @@ def encrypt (str)
 	return encrypted_string
 end
 
-
-
-
 # decrypt method: takes in an encrypted string
 #  -iterate over each character in the string
 #  	- change each letter to the letter before in the alphabet
 #  	-this requires care with a->z as above in encrypt
 #  	-we will still use the "abcdefghijklmnopqrstuvwxyz" string % 26 to do this
 #  return the decrypted string
+
+def decrypt (str)
+	alphabet = "abcdefghijklmnopqrstuvwxyz"
+	len = str.length
+	counter = 0
+	decrypted_string = ""
+	while counter < len                                   #next letter in encrypted string comes by finding the index of the current letter in original string
+		if str[counter] == " "                            # subtracting one to the index to go back and taking it mod 26 to aid with the a -> z issue (rollover)
+			new_letter = " "
+		else                                              
+			new_letter = alphabet[(alphabet.index(str[counter]) - 1) % 26] 
+		end
+		decrypted_string += new_letter
+		counter += 1
+	end
+	return decrypted_string
+end
+
+puts decrypt("abc dbua")
