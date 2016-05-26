@@ -15,14 +15,14 @@
 
 #check different questions for vampire-ness and create boolean flag for different questions
 #age
- if Time.new.year.to_i - birth_year = age || Time.new.year.to_i - birth_year - 1 = age #check to see if vampire is lying. allow for birthday past date in current year.
+ if Time.new.year.to_i - birth_year == age || Time.new.year.to_i - birth_year - 1 == age #check to see if vampire is lying. allow for birthday past date in current year.
  	age_is_vampire = false
  else
  	age_is_vampire = true
  end 
 
  #garlic
- if garlic == "y"
+ if garlic == "n"
  	garlic_is_vampire = true
  else
  	garlic_is_vampire = false
@@ -35,18 +35,25 @@
  	insurance_is_vampire = false
  end
 
+ is_vampire = ""
+
  if !age_is_vampire && (!garlic_is_vampire || !insurance_is_vampire)
  	is_vampire = "Probably not a vampire."
+ end
  if age_is_vampire && (garlic_is_vampire || insurance_is_vampire)
  	is_vampire = "Probably a vampire."
+ end
  if age_is_vampire && garlic_is_vampire && insurance_is_vampire
  	is_vampire = "Almost certainly a vampire."
+ end
  if name == "Drake Cula" || name == "Tu Fang"
  	is_vampire = "Definitely a vampire."
- else
+ end
+ if is_vampire == ""
  	is_vampire = "Results inconclusive."
+ end
 
- puts is_vampire
+ puts "age_is_vampire: #{age_is_vampire}\n garlic_is_vampire: #{garlic_is_vampire}\n insurance_is_vampire: #{insurance_is_vampire}\n name: #{name}\n result: #{is_vampire}"
 
 
  	
