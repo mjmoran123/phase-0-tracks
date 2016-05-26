@@ -34,4 +34,19 @@
  else
  	insurance_is_vampire = false
  end
- 
+
+ if !age_is_vampire && (!garlic_is_vampire || !insurance_is_vampire)
+ 	is_vampire = "Probably not a vampire."
+ if age_is_vampire && (garlic_is_vampire || insurance_is_vampire)
+ 	is_vampire = "Probably a vampire."
+ if age_is_vampire && garlic_is_vampire && insurance_is_vampire
+ 	is_vampire = "Almost certainly a vampire."
+ if name == "Drake Cula" || name == "Tu Fang"
+ 	is_vampire = "Definitely a vampire."
+ else
+ 	is_vampire = "Results inconclusive."
+
+ puts is_vampire
+
+
+ 	
