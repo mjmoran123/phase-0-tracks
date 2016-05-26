@@ -19,6 +19,16 @@
 	 puts "Would you like to enroll in the company's health insurance? (y/n)"
 	 insurance = gets.chomp
 
+	 #allergy loop
+	 allergy = ""
+	 while allergy != "done"
+	 	puts "List any allergies, one at a time. Type done when you are finished."
+	 	allergy = gets.chomp
+	 	if allergy == "sunshine"
+	 		break
+	 	end
+	 end
+
 	#check different questions for vampire-ness and create boolean flag for different questions
 	#age
 	 if Time.new.year.to_i - birth_year == age || Time.new.year.to_i - birth_year - 1 == age #check to see if vampire is lying. allow for birthday past date in current year.
@@ -46,7 +56,7 @@
 	 if !age_is_vampire && (!garlic_is_vampire || !insurance_is_vampire)
 	 	is_vampire = "Probably not a vampire."
 	 end
-	 if age_is_vampire && (garlic_is_vampire || insurance_is_vampire)
+	 if (age_is_vampire && (garlic_is_vampire || insurance_is_vampire)) || allergy == "sunshine"
 	 	is_vampire = "Probably a vampire."
 	 end
 	 if age_is_vampire && garlic_is_vampire && insurance_is_vampire
