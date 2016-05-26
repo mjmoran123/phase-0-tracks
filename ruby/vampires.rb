@@ -53,7 +53,7 @@
  	is_vampire = "Results inconclusive."
  end
 
- puts "age_is_vampire: #{age_is_vampire}\n garlic_is_vampire: #{garlic_is_vampire}\n insurance_is_vampire: #{insurance_is_vampire}\n name: #{name}\n result: #{is_vampire}"
+ puts is_vampire
 
 
  	
