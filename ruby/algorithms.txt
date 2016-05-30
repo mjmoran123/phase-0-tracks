@@ -4,3 +4,12 @@ Elevator Algorithm
 -Push button associated with floor master selected (press it two or three times, it definitely makes the elevator faster)
 -Wait until floor indicator shows the floor you selected.
 -Hold door open for master and exit behind him.
+
+Common Task Algorithm (I was doing some yardwork this weekend)
+
+Trimming Trees Algorithm
+While there is still a branch below max height
+    -Look for lowest branch below max height.
+    -Cut branch off tree
+        -Chop to pieces small enough to fit in bag
+        -Put pieces in bag
