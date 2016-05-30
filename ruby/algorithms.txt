@@ -1,1 +1,6 @@
- 
+Elevator Algorithm
+-Enter elevator
+-Ask master for floor
+-Push button associated with floor master selected (press it two or three times, it definitely makes the elevator faster)
+-Wait until floor indicator shows the floor you selected.
+-Hold door open for master and exit behind him.
