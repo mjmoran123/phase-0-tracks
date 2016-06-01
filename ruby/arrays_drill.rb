@@ -1,3 +1,14 @@
+def build_array(a,b,c)
+	output_array = [a,b,c]
+end
+
+def add_to_array(array_to_add_to, item_to_add)
+	array_to_add_to << item_to_add
+end
+
+
+
+
 our_array = []
 p our_array
 our_array << "pencil" << "ruler"
@@ -19,9 +30,17 @@ else
 	puts "So sorry, #{item} was not found."
 end
 
-new_array = ["an item", "another item", "chocolate", "chocolate with peanut butter"]
+new_array = ["an item", "another item", "chocolate", "chocolate with peanut butter"] #8
 super_array = our_array + new_array
 p super_array
+
+build_array(1,"two", true) #release 2 #1
+
+p add_to_array(["cow", "pig"], "chicken") #2
+p add_to_array(["cat", "mouse"], "bird")
+
+
+
 
 
 
