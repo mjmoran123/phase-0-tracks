@@ -48,14 +48,17 @@ questions = {
 
  p client                       #print client hash to error check
 
- # puts "Which key would you like to update? If none, type none."
- # update = gets.chomp
- # if update != "none"
- # 	sym = update.to_sym
- # 	puts "What would you like to change it to?"
- # 	update = gets.chomp
+ puts "Which key would you like to update? If none, type none."
+ update = gets.chomp
+ if update != "none"
+  	sym = update.to_sym
+ 	puts "What would you like to change it to?"
+  	update = gets.chomp
+  	update = change_type(sym, update)
+ end
 
+ client[sym] = update
 
- # 	client[update.to_sym]
+ p client
 
 
