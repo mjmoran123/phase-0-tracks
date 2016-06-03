@@ -9,13 +9,39 @@
  											#encode symbols with data type so correct conversion can be made S-string, I-int, B-boolean
 questions = {
 	name_S: "Enter Name:", 
-	age_S: "Enter Age:",
+	age_I: "Enter Age:",
 	children_I: "Enter number of children:",
 	decortheme_S: "Enter your decor theme:",
-	solid_B: "Do you like solids?",
-	stripe_B: "Do you like stripes?",
-	pattern_B: "Do you like patterns?"
+	solid_B: "Do you like solids? (y/n)",
+	stripe_B: "Do you like stripes? (y/n)",
+	pattern_B: "Do you like patterns? (y/n)",
 	budget_I: "How many dollars are you willing to spend?"
 	} 
 
  client = {}
+
+ questions.each do |key,value| 
+
+ 	puts value
+ 	input = gets.chomp
+
+
+ 	last_letter = key[-1]
+ 	if last_letter == "I"
+ 		info = input.to_i
+ 	elsif last_letter == "B"
+ 		if input == "y"
+ 			info = true
+ 		else
+ 			info = false
+ 		end
+ 	else
+ 		info = input.to_s
+ 	end
+
+ 	client[key] = info
+ 		
+ end
+
+ p client
+
