@@ -32,6 +32,7 @@
  end
 
  def user_interface
+ 	alias_hash = {}
  	flag = true
  	while flag 
  		puts "Type in a name you want to spyify. When you are done, type quit."
@@ -39,9 +40,11 @@
  		if name == "quit"
  			flag = false
  		else
+ 			alias_hash[name] = spy_nameifier(name)
  			puts spy_nameifier(name)
  		end
  	end
+ 	alias_hash.each { |name,spy_name| puts "#{spy_name} is actually #{name}." }
  end
 
 user_interface
