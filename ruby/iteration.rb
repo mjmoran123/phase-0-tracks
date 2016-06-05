@@ -32,3 +32,32 @@ movies.map! do |film|
 end
 
 p movies
+
+#Release 2
+# 1
+integers = [1,2,3,4,5,6,7,8,9,10]
+p integers
+p integers.delete_if { |number| number < 5 }
+
+#2
+integers = [1,2,3,4,5,6,7,8,9,10]
+p integers
+p integers.keep_if { |number| number < 5 }
+
+#3
+integers = [1,2,3,4,5,6,7,8,9,10]
+p integers
+p integers.reject { |number|  number < 5  }
+
+integers = [1,2,3,4,5,6,7,8,9,10]
+p integers
+p integers.reject { |number|  number > 4  }
+
+#4
+integers = [1,2,3,4,5,6,7,8,9,10]
+p integers
+p integers.drop_while { |number|  number < 5  }
+
+
+
+
