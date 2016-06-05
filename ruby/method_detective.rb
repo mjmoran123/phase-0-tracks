@@ -7,16 +7,19 @@
 puts "iNvEsTiGaTiOn".swapcase
 # => “InVeStIgAtIoN”
 
-# "zom".<???>
+puts "zom".insert(1,"o")
+puts "zom".insert(2,"o")
 # => “zoom”
 
-# "enhance".<???>
+puts "enhance".center(15)
 # => "    enhance    "
 
-# "Stop! You’re under arrest!".<???>
+puts "Stop! You’re under arrest!".upcase
 # => "STOP! YOU’RE UNDER ARREST!"
 
-# "the usual".<???>
+puts "the usual".concat(" suspects")
+puts "the usual" << " suspects"
+puts "the usual" + " suspects"
 #=> "the usual suspects"
 
 # " suspects".<???>
