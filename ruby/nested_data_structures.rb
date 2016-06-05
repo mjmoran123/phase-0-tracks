@@ -69,3 +69,4 @@ texas = {
 p texas[:a2][:inits][14]
 p texas[:a1][:indy_breakdown][7]
 p texas[:a1][:scores][:relay]
+p texas[:a2][:scores]
