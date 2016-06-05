@@ -8,6 +8,8 @@
  # 	if on "bcdfghjklmnpqrstvwxyz" and change mod 21
  # Join the array of spy names into a new string
 
+ 
+
  def character_changer(name)
  	name_chars_array = name.split('') #make array of characters in single name
  	name_chars_array.map! do |char|  #iterate though each character and change accordingly
@@ -29,4 +31,18 @@
  	full_name_array[1] + " " + full_name_array[0] #return reversed spy name
  end
 
- p spy_nameifier("Felicia Torres")
+ def user_interface
+ 	flag = true
+ 	while flag 
+ 		puts "Type in a name you want to spyify. When you are done, type quit."
+ 		name = gets.chomp
+ 		if name == "quit"
+ 			flag = false
+ 		else
+ 			puts spy_nameifier(name)
+ 		end
+ 	end
+ end
+
+user_interface
+ #p spy_nameifier("Felicia Torres")
