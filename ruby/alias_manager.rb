@@ -19,14 +19,14 @@
  			char   #don't change characters that aren't letters
  		end
  	end
- 	return name_chars_array.join #return ne name string
+ 	name_chars_array.join.capitalize #return new name string
  end
 
  def spy_nameifier(boring_name)
  	full_name_array = boring_name.split(' ') #make array of original names
  	full_name_array.map! { |name| name.downcase } #downcase all names
-
- 	p full_name_array
+ 	full_name_array.map! { |name| character_changer(name) } #call character_changer method on each name
+ 	full_name_array[1] + " " + full_name_array[0] #return reversed spy name
  end
 
- p character_changer("abcdefghijklmnopqrstuvwxyz")
+ p spy_nameifier("Felicia Torres")
