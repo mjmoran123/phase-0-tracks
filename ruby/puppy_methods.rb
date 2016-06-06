@@ -5,5 +5,5 @@ class Puppy
     toy
   end
 
-end
+end 
 
