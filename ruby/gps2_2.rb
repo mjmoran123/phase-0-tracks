@@ -5,6 +5,13 @@
   # print the list to the console [can you use one of your other methods here?]
 # output: [what data type goes here, array or hash?]
 
+def make_list(groceries)
+  grocery_array = groceries.split
+  shopping_list = {}
+  grocery_array.each { |item| shopping_list[item] = 1 }
+  p shopping_list
+end
+
 # Method to add an item to a list
 # input: item name and optional quantity
 # parse string into individual strings (one for each item) returns array
