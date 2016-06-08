@@ -14,10 +14,12 @@ end
 
 # Method to add an item to a list
 # input: item name and optional quantity
-# parse string into individual strings (one for each item) returns array
-  #iterate through array (EACH) to input string as key   in hash
-  # set default to 1
+# add input item to hash with specified quantity as value
 # output: hash of strings => integers
+
+def add_item(list, new_item, quantity=1)
+  list[new_item] = quantity 
+end
 
 # Method to remove an item from the list
 # input: item name as string
