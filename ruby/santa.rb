@@ -43,8 +43,8 @@ class Santa
 	# def get_ethnicity
 	# 	@ethnicity
 	# end
-
-	def santa_info
+    
+	def santa_info  #added method to assist testing
 		puts "Gender: #{@gender}"
 		puts "Ethnicity: #{@ethnicity}"
 		puts "Age: #{@age}"
@@ -52,6 +52,7 @@ class Santa
 	end
 end
 
+################# RELEASE 0 AND 1 DRIVER CODE#################
 # claus = Santa.new
 # claus.speak
 # claus.eat_milk_and_cookies("chocolate chip")
@@ -68,12 +69,47 @@ end
 
 # p santas
 
-kris = Santa.new("male", "German")
-puts kris.age
-puts kris.ethnicity
-kris.get_mad_at("Dancer")
-kris.santa_info
-kris.gender = ("bigender")
-10.times { kris.celebrate_birthday }
-kris.santa_info
-puts kris.age
+############# RELEASE 2 AND 3 DRIVER CODE ##################
+
+# kris = Santa.new("male", "German")
+# puts kris.age
+# puts kris.ethnicity
+# kris.get_mad_at("Dancer")
+# kris.santa_info
+# kris.gender = ("bigender")
+# 10.times { kris.celebrate_birthday }
+# kris.santa_info
+# puts kris.age
+
+################ RELEASE 4 DRIVER CODE #####################
+example_genders = ["female", "male", "fluid", "agender", "bigender", "N/A"]
+example_ethnicities = [
+						"Albanian",
+						"Basque",
+						"Congolese",
+						"Dutch",
+						"Estonian",
+						"French",
+						"German",
+						"Hui",
+						"Irish",
+						"Javanese",
+						"Kurdish",
+						"Lebanese",
+						"Malayali",
+						"Norwegian"
+					]
+ages = (0..140).to_a
+p ages
+1000.times do 
+	a = Santa.new(example_genders.sample, example_ethnicities.sample)
+	birthdays = ages.sample
+	birthdays.times { a.celebrate_birthday } #age wasn't supposed to be a setter, so I did this instead. Obviously would be easier to just change to accessor instead of just reader.
+	puts a.gender
+	puts a.ethnicity
+	puts a.age
+end
+
+
+
+
