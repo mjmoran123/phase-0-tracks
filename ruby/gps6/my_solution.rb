@@ -16,27 +16,31 @@ class VirusPredictor
     @population_density = population_density
   end
 
+ 
 # makes calls to the predicted_deaths and speed_of_spread methods to print out effects about a particular virus.
   def virus_effects
     predicted_deaths
     speed_of_spread
   end
 
-  private
+ private
 # takes in data about a state and uses population_density and population to predict the number_of_deaths and prints a statement
   def predicted_deaths
     # predicted deaths is solely based on population density
+    death_quotient = 1
     if @population_density >= 200
-      number_of_deaths = (@population * 0.4).floor
+      death_quotient = 0.4
     elsif @population_density >= 150
-      number_of_deaths = (@population * 0.3).floor
+      death_quotient = 0.3
     elsif @population_density >= 100
-      number_of_deaths = (@population * 0.2).floor
+      death_quotient = 0.2
     elsif @population_density >= 50
-      number_of_deaths = (@population * 0.1).floor
+      death_quotient = 0.1
     else
-      number_of_deaths = (@population * 0.05).floor
+      death_quotient = 0.05
     end
+
+    number_of_deaths = (@population * death_quotient).floor
 
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
 
