@@ -1,7 +1,7 @@
 # Virus Predictor
 
 # I worked on this challenge [by myself].
-# We spent [#] hours on this challenge.
+# We spent [.75] hours on this challenge.
 
 # EXPLANATION OF require_relative
 # require_relative makes the file required available to the file you are working in.
@@ -97,3 +97,8 @@ end
 
 #=======================================================================
 # Reflection Section
+# the two hash syntaxes used were => vs symbol: value. the => can be used with symbols, but can also be used with other objects. the symbol: makes the key a symbol.
+# require_relative finds a file in the same directory. require would need more data about the full path of a the file, so require_relative is a bit of a shortcut when using files in the same directory or close enough to access with ../ and the like
+# in this challenge i used a .each loop to iterate through a hash. i suppose another loop like a for loop could be used, but .each works really nicely for these kinds of things.
+# in the virus_effects methods, the parameters passed in were never used! that was tricky, as they were named the same as the instance variables.
+# I was a bit rusty accessing nested data in a structure, so it was good to revisit that. mostly, I gained familiarity with classes and instance variables, and keys to look for when trying to keep things DRY.
