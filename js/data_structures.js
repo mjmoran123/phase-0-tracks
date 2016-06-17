@@ -15,20 +15,14 @@ for(var i = 0; i < names.length; i++){
 console.log(horses);
 
 function Car(make, model, color, year, runsWell) {
-	// In this context, 'this' refers to 
-	// the individual dog we're making
-	//console.log("Our new dog:", this);
 	
-	// Therefore, this.name is sort of the Ruby
-	// equivalent of @name
 	this.make = make;
 	this.model = model;
 	this.color = color;
 	this.year = year;
 	this.runsWell = runsWell;
 	
-	// As for behavior, a function is a perfectly 
-	// valid property value ... whoa!
+	
 	this.honk = function() { console.log("Beep! Beep!"); };
 	
 }
@@ -38,3 +32,8 @@ var honda = new Car("Honda", "Civic", "Grey", 1997, true);
 toyota.honk();
 honda.honk();
 console.log(toyota.model);
+console.log(toyota.length);
+
+for(horse in horses){
+	console.log(horse + "=>" + horses[horse]);
+}
