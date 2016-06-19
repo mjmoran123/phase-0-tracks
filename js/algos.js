@@ -42,14 +42,51 @@ function keyValMatch(obj1, obj2){
 //  - add each of these words to an empty array as you go.
 //  - return array
 
+function randString(){
+	alphabet = "abcdefghijklmnopqrstuvwxyz";
+	lengthOfString = Math.floor((Math.random() * 10) + 1);
+	retString = "";
+	for(var i = 0; i < lengthOfString; i++){
+		randChar = Math.floor(Math.random() * 26);
+		retString += alphabet.substr(randChar, 1);
+	}
+	return retString;
+}
+
+function randArray(numOfStrings){
+	retArray = [];
+	for(var j = 0; j < numOfStrings; j++){
+		retArray.push(randString());
+	}
+	return retArray;
+}
+
 //DRIVER CODE
 //console.log(maxLength(["a", "abc", "abcdefg", "dog", "doggy", "abcdef", "abcdefghijkl"]));
 //console.log(maxLength(["1", "11111", "2222", "333333", "444444444444444444444444444444", "55", "666", "7777"]));
-var a = {name:"Rhonda", color:"orange"};
-var b = {name:"garfield", color:"orange"};
-var c = {name: "ALF", color:"burnt sienna", planet:"melmac"};
-var d = {name:"Rhonda", color:"brown", planet: "melmac"};
-console.log(keyValMatch(a,b));
-console.log(keyValMatch(c,d));
-console.log(keyValMatch(a,d));
-console.log(keyValMatch(c,a));
+// var a = {name:"Rhonda", color:"orange"};
+// var b = {name:"garfield", color:"orange"};
+// var c = {name: "ALF", color:"burnt sienna", planet:"melmac"};
+// var d = {name:"Rhonda", color:"brown", planet: "melmac"};
+// console.log(keyValMatch(a,b));
+// console.log(keyValMatch(c,d));
+// console.log(keyValMatch(a,d));
+// console.log(keyValMatch(c,a));
+//console.log(randString());
+// console.log(randArray(0));
+// console.log(randArray(1));
+// console.log(randArray(2));
+// console.log(randArray(3));
+// console.log(randArray(4));
+// console.log(randArray(5));
+// console.log(randArray(6));
+// console.log(randArray(7));
+// console.log(randArray(8));
+// console.log(randArray(9));
+// console.log(randArray(10));
+for(var i = 0; i < 10; i++){
+	var a = randArray(5);
+	console.log(a);
+	console.log(maxLength(a));
+}
+
