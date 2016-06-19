@@ -35,6 +35,13 @@ function keyValMatch(obj1, obj2){
 	return false;
 }
 
+// PSEUDOCODE SOLUTION TO R2 -- RANDOM TEST DATA
+//  - to generate random words we will just create a string "abcdefghijklmnopqrstuvwxyz" and randomly generate an int from 0 to 25 to pull a random char from the string
+//  	- just concat to an empty string to create these words with as a random number of characters, as specified in prob statement (1 to 10 chars)
+//  - we will run a loop to do the above as many times as are input
+//  - add each of these words to an empty array as you go.
+//  - return array
+
 //DRIVER CODE
 //console.log(maxLength(["a", "abc", "abcdefg", "dog", "doggy", "abcdef", "abcdefghijkl"]));
 //console.log(maxLength(["1", "11111", "2222", "333333", "444444444444444444444444444444", "55", "666", "7777"]));
