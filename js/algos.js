@@ -27,7 +27,6 @@ function keyValMatch(obj1, obj2){
 			if(key == otherKey && obj1[key] == obj2[otherKey]){
 				
 			return true;
-			//console.log(obj1[key]);
 			}
 		}
 		
