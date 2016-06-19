@@ -21,8 +21,28 @@ function maxLength(array){
 //  	- IF a match of keys is found, then check values
 //  		- IF the values match, then return TRUE as we only need to check for one
 
-
+function keyValMatch(obj1, obj2){
+	for(key in obj1){
+		for(otherKey in obj2){
+			if(key == otherKey && obj1[key] == obj2[otherKey]){
+				
+			return true;
+			//console.log(obj1[key]);
+			}
+		}
+		
+	}
+	return false;
+}
 
 //DRIVER CODE
-console.log(maxLength(["a", "abc", "abcdefg", "dog", "doggy", "abcdef", "abcdefghijkl"]));
-console.log(maxLength(["1", "11111", "2222", "333333", "444444444444444444444444444444", "55", "666", "7777"]));
+//console.log(maxLength(["a", "abc", "abcdefg", "dog", "doggy", "abcdef", "abcdefghijkl"]));
+//console.log(maxLength(["1", "11111", "2222", "333333", "444444444444444444444444444444", "55", "666", "7777"]));
+var a = {name:"Rhonda", color:"orange"};
+var b = {name:"garfield", color:"orange"};
+var c = {name: "ALF", color:"burnt sienna", planet:"melmac"};
+var d = {name:"Rhonda", color:"brown", planet: "melmac"};
+console.log(keyValMatch(a,b));
+console.log(keyValMatch(c,d));
+console.log(keyValMatch(a,d));
+console.log(keyValMatch(c,a));
