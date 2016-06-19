@@ -15,6 +15,14 @@ function maxLength(array){
 	return maxString;
 }
 
+// PSEUDOCODE SOLUTION TO R1 -- KEY-VALUE MATCH
+//  - iterate through each of the keys in the first object to compare against each key in the second object
+//  	- use a nested FOR loop to check each of the keys in the second object against the key in the first object. then move to check each of the keys in the second against the next key in the first.
+//  	- IF a match of keys is found, then check values
+//  		- IF the values match, then return TRUE as we only need to check for one
+
+
+
 //DRIVER CODE
-console.log(maxLength(["a", "abc", "abcdefg", "dog", "doggy", "abcdef"]));
+console.log(maxLength(["a", "abc", "abcdefg", "dog", "doggy", "abcdef", "abcdefghijkl"]));
 console.log(maxLength(["1", "11111", "2222", "333333", "444444444444444444444444444444", "55", "666", "7777"]));
