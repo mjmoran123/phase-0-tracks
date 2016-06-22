@@ -49,3 +49,50 @@ Kevin|false
 Stuart|false
 Tim|false
 Phil|false
+
+6. Different Joins:
+sqlite> SELECT name,style FROM minions CROSS JOIN hairstyles;
+Dave|bald
+Dave|sprout
+Dave|short spike
+Dave|long spike
+Dave|part
+Jerry|bald
+Jerry|sprout
+Jerry|short spike
+Jerry|long spike
+Jerry|part
+Bob|bald
+Bob|sprout
+Bob|short spike
+Bob|long spike
+Bob|part
+Kevin|bald
+Kevin|sprout
+Kevin|short spike
+Kevin|long spike
+Kevin|part
+Stuart|bald
+Stuart|sprout
+Stuart|short spike
+Stuart|long spike
+Stuart|part
+Tim|bald
+Tim|sprout
+Tim|short spike
+Tim|long spike
+Tim|part
+Phil|bald
+Phil|sprout
+Phil|short spike
+Phil|long spike
+Phil|part
+
+sqlite> SELECT name,hair_id FROM minions LEFT OUTER JOIN hairstyles ON minions.hair_id = hairstyles.id;
+Dave|5
+Jerry|3
+Bob|1
+Kevin|2
+Stuart|5
+Tim|2
+Phil|4
