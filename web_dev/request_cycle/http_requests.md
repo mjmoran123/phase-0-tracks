@@ -12,3 +12,6 @@
     - 404 -- Not Found
     - 410 -- Gone
     - 500 -- Internal Server Error
+2. GET VS POST
+    - GET is a request for information from a path
+    - POST submits data to a path
