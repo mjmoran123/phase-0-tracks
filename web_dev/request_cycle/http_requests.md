@@ -13,5 +13,6 @@
     - 410 -- Gone
     - 500 -- Internal Server Error
 2. GET VS POST
-    - GET is a request for information from a path
-    - POST submits data to a path
+    - GET is a request for information from a path. GET is used when a browser wants to view a page.
+    - POST submits data to a path. POST is used when a browser is posting to a page.
+3. A Cookie is data that is stored using a browser rather than being stored on the server. The data is just stored as plaintext and is not executed. Cookies are essential to the modern web, but need to be handled with care in terms of security.
