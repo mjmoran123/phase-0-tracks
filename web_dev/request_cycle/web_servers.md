@@ -7,3 +7,5 @@
     Also, on a VPS, you have access to the root, so you can really do anything that you want. You don't have to depend on or wait for a hosting provider.
 
     Scalability is much easier on a virtual machine, in either direction.
+
+3. Running as root gives every application access and privileges to your entire system, which means any bugs or viruses could wipe things out on your system. Running applications on a user level provides safety and security to your system.
