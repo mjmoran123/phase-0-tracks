@@ -15,6 +15,18 @@ get '/contact/:address' do
   "Please send snail mail to: <br> #{params[:address]}"
 end
 
+# add /great_job route
+
+get '/great_job' do
+  person = params[:name]
+  p params
+  if(person)
+    "Good job, #{person}!"
+  else
+    "Good job!"
+  end
+end
+
 get '/' do
   "#{params[:name]} is #{params[:age]} years old."
 end
