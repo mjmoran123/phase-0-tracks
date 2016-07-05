@@ -27,6 +27,13 @@ get '/great_job' do
   end
 end
 
+get '/addition/:a/:b' do
+  x = params[:a].to_i
+  y = params[:b].to_i
+  z = x + y
+  "#{params[:a]} + #{params[:b]} = #{z}."
+end
+
 get '/' do
   "#{params[:name]} is #{params[:age]} years old."
 end
