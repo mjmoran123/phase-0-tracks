@@ -1,0 +1,13 @@
+body {
+	background-color: white;
+	width: 960px;
+}
+
+#rect {
+	position: relative;
+	top: 300px;
+	left: 40px;
+	height: 100px;
+	width: 500px;
+	background-color: red;
+}
