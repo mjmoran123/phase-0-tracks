@@ -1,4 +1,4 @@
- # require gems
+# require gems
 require 'sinatra'
 require 'sqlite3'
 
@@ -8,6 +8,13 @@ db.results_as_hash = true
 # write a basic GET route
 # add a query parameter
 # GET /
+
+# add /contact route that displays an address:
+
+get '/contact/:address' do
+  "Please send snail mail to: <br> #{params[:address]}"
+end
+
 get '/' do
   "#{params[:name]} is #{params[:age]} years old."
 end
