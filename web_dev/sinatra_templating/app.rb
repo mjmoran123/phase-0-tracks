@@ -24,4 +24,16 @@ post '/students' do
   redirect '/'
 end
 
+get '/students/edit' do
+	erb :edit
+end
+
+post '/anything' do
+	edit_age = params['age']
+	db.execute("DELETE from students WHERE age=  #{edit_age}")
+  	redirect '/'
+end
+
+
+
 # add static resources
