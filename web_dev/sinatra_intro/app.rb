@@ -34,6 +34,17 @@ get '/addition/:a/:b' do
   "#{params[:a]} + #{params[:b]} = #{z}."
 end
 
+get '/search/:age' do
+  age = params[:age]
+  students = db.execute("SELECT * FROM students WHERE age=?", age)
+  students.to_s
+  print_str = ""
+  students.each do |student|
+    print_str += "NAME: #{student['name']}  CAMPUS: #{student['campus']}<br>"
+  end
+  print_str
+end
+
 get '/' do
   "#{params[:name]} is #{params[:age]} years old."
 end
